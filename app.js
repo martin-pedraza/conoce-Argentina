@@ -3,9 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var override = require('method-override');
 
 var indexRouter = require('./src/routes/index');
-var slideRouter = require('./src/routes/slide');
 
 var app = express();
 
@@ -18,9 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(override('_method'));
 
 app.use('/', indexRouter);
-app.use('/slide', slideRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

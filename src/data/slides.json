@@ -1,0 +1,23 @@
+[
+ {
+  "id": 0,
+  "title": "Presentation",
+  "description": "In full screen, you can add, edit and remove the slides of the carousel",
+  "img": "images/slide1.jpg",
+  "removed": 0
+ },
+ {
+  "id": 1,
+  "title": "Slide 1",
+  "description": "This is a slide test",
+  "img": "images/slide2.jpg",
+  "removed": 0
+ },
+ {
+  "id": 2,
+  "title": "Slide 2",
+  "description": "This is a slide test",
+  "img": "images/slide3.jpg",
+  "removed": 0
+ }
+]
