@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-
+  
   <%- include('./partials/head') %>
 
   <body class="bg-secondary bg-gradient bg-opacity-25">
-    <%- include('./partials/nav') %>
-
-    <main class="container">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <main class="container-fluid">  
+      <div id="carouselExampleCaptions" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators d-none d-sm-flex">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <% for(let i=1; i<slides.length; i++) { %>
-            <% if(slides[i].removed == 0) { %> 
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<%= i %>" aria-label="Slide <%= i %>  "></button>
-            <% } %> 
+          <% 
+          let j = 1;
+          let k = 2;
+          for(let i=1; i<slides.length; i++) {     
+            if(slides[i].removed == 0) { %> 
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<%= j %>" aria-label="Slide <%= k %>"></button>
+              <% j++; k++; 
+            } %> 
           <% } %> 
         </div>
         
         <div class="carousel-inner d-none d-sm-block">
-          <div class="carousel-item active" data-bs-interval="4000">
-            <img src="/<%= presentation.img %>" class="d-block vh-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="/<%= presentation.img %>" class="d-block vh-100" alt="..." style="margin: 0 auto;">
+            <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 w-25 rounded-3" style="margin: 0 auto;">
               <h5><%= presentation.title %></h5>
               <p><%= presentation.description %></p>
             </div>
@@ -28,9 +30,9 @@
 
           <% for(let i=1; i<slides.length; i++) { %>
             <% if(slides[i].removed == 0) { %> 
-              <div class="carousel-item" data-bs-interval="1000">
-                <img src="/<%= slides[i].img %>" class="d-block vh-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="/<%= slides[i].img %>" class="d-block vh-100" alt="..." style="margin: 0 auto;">
+                <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 w-25 rounded-3" style="margin: 0 auto;">
                   <h5><%= slides[i].title %></h5>
                   <p><%= slides[i].description %></p>
                 </div>
@@ -38,6 +40,7 @@
             <% } %> 
           <% } %> 
         </div>
+
         <div class="d-none d-sm-flex">
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,9 +54,11 @@
       </div>
     </main>
 
-    <section id="section" class="container d-flex justify-content-evenly">
-      <% for(s of slides) { %>
-        <% if(s.id != 0) { %>  
+    <%- include('./partials/nav') %>
+
+    <section id="section" class="container-fluid d-flex justify-content-evenly flex-wrap">
+      <% for(s of slides) { 
+        if(s.id != 0 && s.deleted != 1) { %>  
           <div class="card my-3" style="width: 18rem;">
             <img src="/<%= s.img %>" class="card-img-top" alt="...">
             <div class="card-body">
@@ -63,20 +68,23 @@
             <div class="card-body d-flex justify-content-evenly">
               <% if(s.removed == 1) { %> 
                 <form action="/slide/activate/<%= s.id %>?_method=put" method="post">
-                  <button class="btn btn-outline-success"><i class="bi bi-check-circle-fill"></i></button>
+                  <button class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Add slide to the carousel"><i class="bi bi-check-circle-fill"></i></button>
+                </form>
+                <form action="/slide/delete/<%= s.id %>?_method=delete" method="post">
+                  <button class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Delete slide"><i class="bi bi-trash3-fill"></i></button>
                 </form>
               <% } else { %> 
-                <form action="/slide/edit/:id" method="get">
-                  <button class="btn btn-outline-warning"><i class="bi bi-pencil-square"></i></button>
+                <form action="/slide/edit/<%= s.id %>" method="get">
+                  <button class="btn btn-outline-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Edit slide"><i class="bi bi-pencil-square"></i></button>
                 </form>
                 <form action="/slide/remove/<%= s.id %>?_method=delete" method="post">
-                  <button class="btn btn-outline-danger"><i class="bi bi-trash3-fill"></i></button>
+                  <button class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Remove slide from the carousel"><i class="bi bi-x-circle-fill"></i></button>
                 </form>
               <% } %> 
             </div>
           </div>
-        <% } %> 
-      <% } %> 
+        <% } 
+      } %> 
     </section>
 
     <%- include('./partials/footer') %>

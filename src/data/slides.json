@@ -4,20 +4,87 @@
   "title": "Presentation",
   "description": "In full screen, you can add, edit and remove the slides of the carousel",
   "img": "images/slide1.jpg",
-  "removed": 0
+  "removed": 0,
+  "deleted": 0
  },
  {
   "id": 1,
-  "title": "Slide 1",
-  "description": "This is a slide test",
-  "img": "images/slide2.jpg",
-  "removed": 0
+  "title": "Buenos Aires city, Argentina",
+  "description": "The Puente de la Mujer is so called because it is located in a neighborhood that pays tribute to outstanding women with the names of its streets.",
+  "img": "images/slide - 1664570214526.jpg",
+  "removed": 0,
+  "deleted": 0
  },
  {
   "id": 2,
-  "title": "Slide 2",
-  "description": "This is a slide test",
-  "img": "images/slide3.jpg",
-  "removed": 0
+  "title": "Cordoba, Argentina",
+  "description": "The name of this complex, “Siete Cascadas”, alludes to the artificial formation of seven waterfalls that originate in the unevenness of the Dique La Falda reservoir.",
+  "img": "images/slide - 1664563368771.jpg",
+  "removed": 0,
+  "deleted": 0
+ },
+ {
+  "id": 3,
+  "title": "Jujuy, Argentina",
+  "description": "The \"Cerro de los Siete Colores\" originated around seventy-five million years ago. It is made up of marine, lacustrine and fluvial sediments that were deposited in the area for centuries.",
+  "img": "images/slide - 1664563614528.jpg",
+  "removed": 0,
+  "deleted": 0
+ },
+ {
+  "id": 4,
+  "title": "Misiones, Argentina",
+  "description": "The \"Cataratas del Iguazú\" are unanimously recognized as the most spectacular in the world.",
+  "img": "images/slide - 1664564024345.jpg",
+  "removed": 0,
+  "deleted": 0
+ },
+ {
+  "id": 5,
+  "title": "Santa Cruz, Argentina",
+  "description": "The Perito Moreno glacier pays tribute to Francisco Moreno, director of the Argentine Scientific Society museum and an active explorer of the southern part of that country.",
+  "img": "images/slide - 1664564312309.jpg",
+  "removed": 0,
+  "deleted": 0
+ },
+ {
+  "id": 6,
+  "title": "Chubut, Argentina",
+  "description": "Some whales usually stay in the waters of the Nuevo Golf in front of the city of Puerto Madryn and can be seen from the beach or from the waterfront.",
+  "img": "images/slide - 1664570816700.jpg",
+  "removed": 0,
+  "deleted": 0
+ },
+ {
+  "id": 7,
+  "title": "Buenos Aires, Argentina",
+  "description": "Mar del Plata is a city located on the Argentine maritime coast that is the second tourist destination in the country after the Buenos Aires city. In summer its population can increase by around 300%, so it has a wide range of hotel infrastructure and other services.",
+  "img": "images/slide - 1664570981860.jpg",
+  "removed": 1,
+  "deleted": 0
+ },
+ {
+  "id": 8,
+  "title": "Corrientes, Argentina",
+  "description": "Esteros del Iberá is called an extensive wetland that covers about 12,000 km² which, due to its peculiar geography and difficult access, has a rich and varied animal population in the area.",
+  "img": "images/slide - 1664571133047.jpg",
+  "removed": 1,
+  "deleted": 0
+ },
+ {
+  "id": 9,
+  "title": "Mendoza, Argentina",
+  "description": "Las Leñas is one of the most important ski and snowboard centers in Argentina and America.",
+  "img": "images/slide - 1664571273569.jpg",
+  "removed": 0,
+  "deleted": 0
+ },
+ {
+  "id": 10,
+  "title": "Neuquen, Argentina",
+  "description": "Lake Nahuel Huapi is a lake of glacial origin in the Argentine Patagonia. Its intense blue color, its islands, and the landscape that surrounds it, make it one of the most attractive places in southern Argentina and a magnet for national and international tourism.",
+  "img": "images/slide - 1664571378326.jpeg",
+  "removed": 0,
+  "deleted": 0
  }
 ]
