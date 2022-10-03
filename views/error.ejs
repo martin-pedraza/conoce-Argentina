@@ -1,3 +1,29 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="en"class="h-100">
+
+    <%- include('./partials/head') %>
+
+    <body class="h-100" style="background-image: url('/images/carouselError.jpg'); background-repeat: no-repeat; background-size: cover;">
+        
+        <main class="vh-100 d-flex justify-content-center align-items-center">
+            <div id="carouselExampleSlidesOnly" class="carousel slide rounded bg-light bg-opacity-50 p-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h2>ERROR 404</h2>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="/" class="btn btn-outline-dark btn-lg fw-bold">HOME</a>
+                  </div>
+                  <div class="carousel-item">
+                    <h2>Page not found</h2>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="/" class="btn btn-outline-dark btn-lg fw-bold">HOME</a>
+                  </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('./partials/footer') %>
+    </body>
+</html>
