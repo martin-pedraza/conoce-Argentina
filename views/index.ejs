@@ -22,7 +22,7 @@
         <div class="carousel-inner d-none d-sm-block">
           <div class="carousel-item active" data-bs-interval="3000">
             <img src="/<%= presentation.img %>" class="d-block vh-100" alt="..." style="margin: 0 auto;">
-            <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 w-25 rounded-3" style="margin: 0 auto;">
+            <div class="carousel-caption d-none d-lg-block bg-light bg-opacity-50 w-50 rounded-3" style="margin: 0 auto;">
               <h5><%= presentation.title %></h5>
               <p><%= presentation.description %></p>
             </div>
@@ -32,7 +32,7 @@
             <% if(slides[i].removed == 0) { %> 
               <div class="carousel-item" data-bs-interval="5000">
                 <img src="/<%= slides[i].img %>" class="d-block vh-100" alt="..." style="margin: 0 auto;">
-                <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 w-25 rounded-3" style="margin: 0 auto;">
+                <div class="carousel-caption d-none d-lg-block bg-light bg-opacity-50 w-50 rounded-3" style="margin: 0 auto;">
                   <h5><%= slides[i].title %></h5>
                   <p><%= slides[i].description %></p>
                 </div>
