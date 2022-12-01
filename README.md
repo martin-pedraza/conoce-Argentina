@@ -2,7 +2,7 @@
 
 CRUD motivational carousel is my third website. I used EJS, CSS with Bootstrap and the MVC model, always looking for a responsive view. The main purpose of the site is the CRUD process using local storage in a JSON file, where you can create, read, update and delete slides from the carousel. I put pictures of landscapes but you can use this system to display a personal photo book or a presentation at work.
 
-The deployment was made with Railway. The URL is <a href="https://crud-motivational-carousel-production.up.railway.app/">crud-motivational-carousel-production.up.railway.app</a>.
+The deployment was made with Cyclic. The URL is <a href="https://zany-gold-gecko-yoke.cyclic.app/">zany-gold-gecko-yoke.cyclic.app</a>.
 
 ## Installation
 
