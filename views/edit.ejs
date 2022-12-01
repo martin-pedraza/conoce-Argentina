@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+	<%- include('./partials/head') %>
 
-  <%- include('./partials/head') %>
+	<body>
+		<%- include('./partials/nav') %>
 
-  <body>
-    <%- include('./partials/nav') %>
-    
-    <main class="container pb-3">
-      <form action="/slide/edit/<%= slide.id %>?_method=put" method="post" enctype="multipart/form-data">
-        <div class="my-3">
-            <label for="title" class="form-label fw-bold">Title</label>
-            <input type="text" class="form-control" id="title" name="title" value="<%= slide.title %>">
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label fw-bold">Message</label>
-            <textarea class="form-control" id="message" rows="3" name="description"><%= slide.description %></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label fw-bold">Slide image</label>
-            <input class="form-control" type="file" id="formFile" name="img" required>
-        </div>
-        <div class="my-3">
-            <button class="btn btn-lg btn-dark" type="submit">Edit slide</button>
-        </div>
-      </form>
-    </main>
+		<main class="container pb-3">
+			<form
+				action="/slide/edit/<%= slide.id %>?_method=put"
+				method="post"
+				enctype="multipart/form-data"
+			>
+				<div class="my-3">
+					<label for="title" class="form-label fw-bold">Title</label>
+					<input
+						type="text"
+						class="form-control"
+						id="title"
+						name="title"
+						value="<%= slide.title %>"
+					/>
+				</div>
+				<div class="mb-3">
+					<label for="message" class="form-label fw-bold">Message</label>
+					<textarea
+						class="form-control"
+						id="message"
+						rows="3"
+						name="description"
+					>
+<%= slide.description %></textarea
+					>
+				</div>
+				<div class="mb-3">
+					<label for="formFile" class="form-label fw-bold">Slide image</label>
+					<input
+						class="form-control"
+						type="file"
+						id="formFile"
+						name="img"
+						required
+					/>
+				</div>
+				<div class="my-3">
+					<button class="btn btn-lg btn-dark" type="submit">Edit slide</button>
+				</div>
+			</form>
+		</main>
 
-    <%- include('./partials/footer') %>
-  </body>
+		<%- include('./partials/footer') %>
+	</body>
 </html>

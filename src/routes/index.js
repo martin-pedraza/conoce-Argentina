@@ -13,7 +13,7 @@ router.get('/create', indexController.create);
 
 router.post('/create', upload.single('img'), indexController.build);
 
-router.put('/slide/activate/:id', indexController.activate)
+router.put('/slide/activate/:id', indexController.activate);
 
 router.get('/slide/edit/:id', indexController.edit);
 
